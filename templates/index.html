@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanvasSync | Real-Time Collaborative Whiteboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <h1>🎨 CanvasSync</h1>
+        <span class="subtitle">Real-Time Collaborative Whiteboard</span>
+    </header>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <div class="tool-group">
+            <label>Brush Color</label>
+            <input type="color" id="colorPicker">
+        </div>
+
+        <div class="tool-group">
+            <button class="btn danger" onclick="clearCanvas()">Clear Board</button>
+        </div>
+    </div>
+
+    <!-- Canvas Area -->
+    <main class="canvas-container">
+        <canvas id="board"></canvas>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
